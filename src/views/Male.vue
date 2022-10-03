@@ -9,9 +9,9 @@
     <template>
         <div class="mt-10">
             <div v-if="isFinished">
-                <div v-for="p in data.products" :key="p.id">
-                    <p class="text-xl text-red-300">{{p.title}}</p>
-                </div>
+              <router-link to="/home" class="text-xl text-red-500">
+lol
+              </router-link>
             </div>
             <div v-else class="text-black text-2xl">загрузка</div>
         </div>

@@ -24,6 +24,28 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AllProd.vue')
     },
+    {
+      path: "/product/:id",
+      name: "product",
+
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Product.vue'),
+      props: route =>({id: route.params.id})
+
+    },
+    {
+      path: "/pagination",
+      name: "pagination",
+
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Pagination.vue'),
+   
+
+    }
   ],
 });
 
